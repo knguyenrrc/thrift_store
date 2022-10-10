@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'author/index'
+  get 'author/show'
   get 'publisher/index'
   get 'publisher/show'
   get 'subject/index'
