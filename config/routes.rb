@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'publisher/index'
+  get 'publisher/show'
   get 'subject/index'
   get 'subject/show'
   get 'book/index'
