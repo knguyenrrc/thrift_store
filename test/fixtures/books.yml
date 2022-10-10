@@ -4,8 +4,10 @@ one:
   title: MyString
   pages: 1
   price: 9.99
+  author: one
 
 two:
   title: MyString
   pages: 1
   price: 9.99
+  author: two
