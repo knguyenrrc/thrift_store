@@ -5,6 +5,8 @@ ruby "3.0.3"
 
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'main'
 
+gem 'kaminari'
+
 gem "rest-client"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
