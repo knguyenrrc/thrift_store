@@ -4,6 +4,6 @@ class AuthorController < ApplicationController
   end
 
   def show
-    @author = Author.find([params[:id]])
+    @author = Author.find(params[:id])
   end
 end

@@ -1,2 +1,9 @@
-<h1>Author#show</h1>
-<p>Find me in app/views/author/show.html.erb</p>
+<h2><%= @author.name %></h2>
+<article>
+  <div class="message is-dark">
+    <p>Books:</p>
+  </div>
+  <div class="message-body">
+    <%= @author.books.map(&:title).join(", ")  %>
+  </div>
+</article>
