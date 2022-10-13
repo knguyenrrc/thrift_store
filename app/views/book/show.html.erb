@@ -1,2 +1,2 @@
-<h1>Book#show</h1>
-<p>Find me in app/views/book/show.html.erb</p>
+<% content_for (:html_title) {@book.title}%>
+<%= render 'book/book' %>
