@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # root "books#index"
+  root "book#index"
   # get 'author/index'
   # get 'author/show'
   # get 'publisher/index'
@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   get "/subjects/:id", to: "subject#show", as: "subject", constraints: { id: /\d+/ } # subject_path
 
   get "/about", to: "about#index", as: "about" # about_path
+
   resources :book, only: [:index, :show] do
     collection do
       get "search"
