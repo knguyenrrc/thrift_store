@@ -1,5 +1,7 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
+<title>About page</title>
 <%= render "layouts/menu" %>
-<html>
 <h3>This thrift store will get data from 3 different sources:</h3>
 <ol>
   <li>A CSV file to get the author keys</li>
@@ -15,6 +17,5 @@
 </ul>
 <h2>The ERD of the thrift store:</h2>
 <div>
-  <%= image_tag(image_path('thrift_store.jpg'), class: "img-responsive", height: "auto", width: "50%") %>
-<div>
-</html>
+  <%= image_tag(image_path('thrift_store.jpg'), class: "img-responsive", alt: "erd") %>
+</div>
