@@ -1,6 +1,6 @@
 class SubjectController < ApplicationController
   def index
-    @subjects = Subject.all
+    @subjects = Subject.order(created_at: :asc).page(params[:page])
   end
 
   def show
