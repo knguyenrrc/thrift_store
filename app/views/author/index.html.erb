@@ -1,2 +1,10 @@
-<h1>Author#index</h1>
-<p>Find me in app/views/author/index.html.erb</p>
+<h1>All Books:</h1>
+<%= paginate @authors %>
+<ol>
+  <% @authors.each do |author| %>
+    <li>
+      <%= link_to author.name, author %>
+    </li>
+  <% end %>
+</ol>
+<%= paginate @authors %>
