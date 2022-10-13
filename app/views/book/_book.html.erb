@@ -15,3 +15,11 @@
   <p>Publisher:</p>
   <%= @book.publishers.map(&:name).join(", ") %>
 </p>
+<p>
+  <p>Price:</p>
+  <p>$<%= @book.price %></p>
+</p>
+<p>
+  <p>Pages:</p>
+  <%= @book.pages %>
+</p>
