@@ -1,10 +1,12 @@
-<h1>All Books:</h1>
-<%= paginate @books %>
-<ol>
-  <% @books.each do |book| %>
-    <li>
-      <%= link_to book.title, book %>
-    </li>
-  <% end %>
-</ol>
-<%= paginate @books %>
+<div class="container">
+  <h3 class="title is-3">All Books:</h3>
+  <nav class="pagination" role="navigation" aria-label="pagination"><%= paginate @books %> </nav>
+  <ol>
+    <% @books.each do |book| %>
+      <li>
+        <%= link_to book.title, book %>
+      </li>
+    <% end %>
+  </ol>
+  <nav class="pagination" role="navigation" aria-label="pagination"><%= paginate @books %> </nav>
+</div>

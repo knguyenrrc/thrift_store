@@ -1,9 +1,11 @@
-<h2><%= @subject.name %></h2>
-<article>
-  <div class="message is-dark">
-    <p>Books:</p>
-  </div>
-  <div class="message-body">
-    <%= @subject.books.map(&:title).join(", ")  %>
-  </div>
-</article>
+<div class="container">
+  <h3 class="title is-3"><%= @subject.name %></h3>
+  <article>
+    <div class="message is-dark">
+      <p>Books:</p>
+    </div>
+    <div class="message-body">
+      <%= @subject.books.map(&:title).join(", ")  %>
+    </div>
+  </article>
+</div>

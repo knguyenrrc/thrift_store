@@ -1,10 +1,12 @@
-<h1>All Authors:</h1>
-<%= paginate @authors %>
-<ol>
-  <% @authors.each do |author| %>
-    <li>
-      <%= link_to author.name, author %>
-    </li>
-  <% end %>
-</ol>
-<%= paginate @authors %>
+<div class="container">
+  <h3 class="title is-3">All Authors:</h3>
+  <nav class="pagination" role="navigation" aria-label="pagination"><%= paginate @authors %> </nav>
+  <ol>
+    <% @authors.each do |author| %>
+      <li>
+        <%= link_to author.name, author %>
+      </li>
+    <% end %>
+  </ol>
+  <nav class="pagination" role="navigation" aria-label="pagination"><%= paginate @authors %> </nav>
+</div>

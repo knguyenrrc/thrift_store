@@ -1,9 +1,11 @@
-<p class="mb-5">
- Found <%= pluralize(@books.count, 'books') %>  found when searching for keyword: <%= params[:keywords] %>
-</p>
+<div class="container">
+  <h3 class="title is-3">
+  Found <%= pluralize(@books.count, 'books') %>  found when searching for keyword: <%= params[:keywords] %>
+  </h3>
 
-<ul>
-  <% @books.each do |book| %>
-    <li><%= link_to book.title, book %></li>
-  <% end %>
-</ul>
+  <ul>
+    <% @books.each do |book| %>
+      <li><%= link_to book.title, book %></li>
+    <% end %>
+  </ul>
+</div>

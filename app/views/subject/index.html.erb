@@ -1,10 +1,12 @@
-<h1>All Subjects:</h1>
-<%= paginate @subjects %>
-<ol>
-  <% @subjects.each do |subject| %>
-    <li>
-      <%= link_to subject.name, subject %>
-    </li>
-  <% end %>
-</ol>
-<%= paginate @subjects %>
+<div class="container">
+  <h3 class="title is-3">All Subjects:</h3>
+  <nav class="pagination" role="navigation" aria-label="pagination"><%= paginate @subjects %> </nav>
+  <ol>
+    <% @subjects.each do |subject| %>
+      <li>
+        <%= link_to subject.name, subject %>
+      </li>
+    <% end %>
+  </ol>
+  <nav class="pagination" role="navigation" aria-label="pagination"><%= paginate @subjects %> </nav>
+</div>

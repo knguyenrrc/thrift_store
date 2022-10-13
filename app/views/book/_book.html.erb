@@ -1,25 +1,27 @@
-<h2><%= @book.title %></h2>
-<article>
-  <div class="message is-dark">
-    <p>Author:</p>
-  </div>
-  <div class="message-body">
-    <%=link_to @book.author.name, @book.author %>
-  </div>
-</article>
-<p>
-  <p>Subject:</p>
-  <%= @book.subjects.map(&:name).join(", ") %>
-</p>
-<p>
-  <p>Publisher:</p>
-  <%= @book.publishers.map(&:name).join(", ") %>
-</p>
-<p>
-  <p>Price:</p>
-  <p>$<%= @book.price %></p>
-</p>
-<p>
-  <p>Pages:</p>
-  <%= @book.pages %>
-</p>
+<div class="container">
+  <h2><%= @book.title %></h2>
+  <article>
+    <div class="message is-dark">
+      <p>Author:</p>
+    </div>
+    <div class="message-body">
+      <%=link_to @book.author.name, @book.author %>
+    </div>
+  </article>
+  <p>
+    <p>Subject:</p>
+    <%= @book.subjects.map(&:name).join(", ") %>
+  </p>
+  <p>
+    <p>Publisher:</p>
+    <%= @book.publishers.map(&:name).join(", ") %>
+  </p>
+  <p>
+    <p>Price:</p>
+    <p>$<%= @book.price %></p>
+  </p>
+  <p>
+    <p>Pages:</p>
+    <%= @book.pages %>
+  </p>
+</div>
