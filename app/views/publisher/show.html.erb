@@ -1,2 +1,9 @@
-<h1>Publisher#show</h1>
-<p>Find me in app/views/publisher/show.html.erb</p>
+<h2><%= @publisher.name %></h2>
+<article>
+  <div class="message is-dark">
+    <p>Books:</p>
+  </div>
+  <div class="message-body">
+    <%= @publisher.books.map(&:title).join(", ")  %>
+  </div>
+</article>
