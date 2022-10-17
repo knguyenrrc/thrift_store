@@ -9,6 +9,10 @@ class BookController < ApplicationController
 
   def search
     wildcard_search = "%#{params[:keywords]}%"
-    @books = Book.where("title LIKE ?", wildcard_search)
+    if params[:author] == ""
+      @books = Book.where("title LIKE ?", wildcard_search)
+    else
+      @books = Book.where("title LIKE ?", wildcard_search).where("author_id = ?", params[:author])
+    end
   end
 end

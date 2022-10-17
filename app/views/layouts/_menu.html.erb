@@ -16,6 +16,9 @@
                 <%= text_field_tag(:keywords, nil, class: "input is-info", placeholder: 'Search for book') %>
               </div>
               <div class="control">
+                <%= select_tag(:author, options_from_collection_for_select(Author.all, "id", "name"), :include_blank => 'All', class: "dropdown") %>
+              </div>
+              <div class="control">
                 <%=submit_tag("Search", class: "button is-primary")%>
               </div>
             </div>
