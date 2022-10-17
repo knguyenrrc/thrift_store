@@ -5,7 +5,10 @@
       <p>Books from this author:</p>
     </div>
     <div class="message-body">
-      <%= @author.books.map(&:title).join(", ")  %>
+      <% @author.books.each do |book| %>
+        <%= link_to book.title, '/books/' + book.id.to_s %>
+        <br>
+      <% end %>
     </div>
   </article>
 </div>

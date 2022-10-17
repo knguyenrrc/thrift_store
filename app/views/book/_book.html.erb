@@ -1,25 +1,35 @@
 <div class="container">
-  <h2><%= @book.title %></h2>
+  <h3 class="title is-3"><%= @book.title %></h3>
   <article>
     <div class="message is-dark">
       <p>Author:</p>
     </div>
     <div class="message-body">
-      <%=link_to @book.author.name, @book.author %>
+      <%= link_to @book.author.name, @book.author %>
     </div>
   </article>
+  <br>
   <p>
     <p>Subject:</p>
-    <%= @book.subjects.map(&:name).join(", ") %>
+    <% @book.subjects.each do |sub| %>
+      <%= link_to sub.name, '/subjects/' + sub.id.to_s %>
+      <br>
+    <% end %>
   </p>
+  <br>
   <p>
     <p>Publisher:</p>
-    <%= @book.publishers.map(&:name).join(", ") %>
+    <% @book.publishers.each do |pub| %>
+      <%= link_to pub.name, '/publishers/' + pub.id.to_s %>
+      <br>
+    <% end %>
   </p>
+  <br>
   <p>
     <p>Price:</p>
     <p>$<%= @book.price %></p>
   </p>
+  <br>
   <p>
     <p>Pages:</p>
     <%= @book.pages %>

@@ -5,7 +5,10 @@
       <p>Books:</p>
     </div>
     <div class="message-body">
-      <%= @subject.books.map(&:title).join(", ")  %>
+      <% @subject.books.each do |book| %>
+        <%= link_to book.title, '/books/' + book.id.to_s %>
+        <br>
+      <% end %>
     </div>
   </article>
 </div>
